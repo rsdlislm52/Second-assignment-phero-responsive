@@ -1,0 +1,47 @@
+/*****Common CSS****/
+:root{
+    --primary-color: #FF42A5;
+    --secondary-color: #3C354F;
+    --body-font-size: 1.1rem;
+    --h2-font-size: 3rem;
+    --common-font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pink_color{
+    color: var(--primary-color);
+}
+p{
+    margin: 0;
+}
+header,
+.right_nav,
+.right_menu ul,
+.right_follow_us{
+    display: flex;
+    justify-content: space-between;
+}
+/****Header styling***/
+.right_menu ul li{
+    list-style: none;
+}
+
+.right_menu ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-right: 32px;
+    font-size: var(--body-font-size);
+}
+.right_menu ul li a:hover{
+    color: var(--primary-color);
+}
+.site_logo{
+    display: flex;
+    gap: 20px;
+}
+
+.site_logo .logo_text p{
+    font-size: 2.9rem;
+    font-weight: 800;
+}
