@@ -218,6 +218,75 @@ h1{
 }
 .play_games_online{
     padding: 120px 0;
+    padding-bottom: 240px;
+}
+/****Bottom Multi button section***/
+.multi_btn_section{
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 120px 0;
+    background: rgba(255, 66, 165, .05);
+}
+.multi_btn_section .multi_btn{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.multi_btn_section .multi_btn:hover{
+    border-color: var(--primary-color);
+}
+.multi_btn_section .multi_btn:hover p{
+    color: var(--primary-color);
+}
+/**Footer CSS**/
+footer{
+    background: #0B0223;
+    padding: 120px 0;
+}
+footer .site_logo{
+    justify-content: center;
+}
+footer .site_logo p{
+    color: #fff;
+}
+.footer_menu ul,
+.footer_icon ul,
+.footer_btm_menu ul{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+.footer_menu ul li,
+.footer_icon ul li,
+.footer_btm_menu ul li{
+    list-style: none;
+}
+.footer_menu ul li a,
+.footer_btm_menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer_btm_menu ul li a{
+    opacity: 0.6;
+}
+footer .site_logo,
+.footer_menu,
+.footer_icon{
+    margin-bottom: 56px;
+}
+.footer_btm_copy p{
+    text-align: center;
+    color: #fff;
+    opacity: .6;
 }
 /*****Media Query for Tablet and mobile****/
 @media (max-width: 980px){
@@ -269,5 +338,14 @@ h1{
     }
     body .left_img_relative{
         margin-bottom: 150px;
+    }
+    .left_img_absolute{
+        position: static !important;
+    }
+    .left_img_absolute img{
+        width: 100%;
+    }
+    .play_games_online{
+        padding-bottom: 100px;
     }
 }
