@@ -2,31 +2,86 @@
 :root{
     --primary-color: #FF42A5;
     --secondary-color: #3C354F;
+    --body-text-color: #534C64;
     --body-font-size: 1.1rem;
     --h2-font-size: 3rem;
-    --common-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --common-font-family: 'Work Sans', sans-serif;
+    --common-h2-font-weight: 700;
+    --button-hover-color: #4EC5F7;
 }
+.container{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body-text-color);
+}
+h2{
+    font-weight: var(--common-h2-font-weight);
 }
 .pink_color{
     color: var(--primary-color);
 }
 p{
     margin: 0;
+    font-size: var(--body-font-size);
 }
-header,
+.gardient_text_color{
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header_container,
 .right_nav,
 .right_menu ul,
 .right_follow_us{
     display: flex;
     justify-content: space-between;
 }
+.display_flex{
+    display: flex;
+}
+h1, h2, h3{
+    margin: 0;
+}
+.primary_btn{
+    background: var(--primary-color);
+    padding: 21px 40px;
+    border-radius: 48px;
+    border: none;
+    color: #fff;
+    font-size: var(--body-font-size);
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+.primary_btn:hover{
+    background: var(--button-hover-color);
+}
+.blue_bg_btn{
+    background: var(--button-hover-color);
+}
+.blue_bg_btn:hover{
+    background: var(--primary-color);
+}
 /****Header styling***/
+.header_container{
+    padding: 37px 0;
+    background: #fff;
+}
+.right_follow_us{
+    align-items: center;
+    background: rgba(11, 2, 35, .1);
+    padding: 16px 24px;
+    border-radius: 8px;
+    gap: 24px;
+}
 .right_menu ul li{
     list-style: none;
 }
-
 .right_menu ul li a{
     text-decoration: none;
     color: var(--secondary-color);
@@ -44,4 +99,101 @@ header,
 .site_logo .logo_text p{
     font-size: 2.9rem;
     font-weight: 800;
+}
+
+/*****Hero Section****/
+.hero_section .container{
+    justify-content: space-between;
+    align-items: center;
+}
+body .hero_big_p{
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+}
+h1{
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+.hero_icon_txt{
+    margin-bottom: 17px;
+    display: flex;
+    gap: 12px;
+}
+.two_button{
+    display: flex;
+    gap: 24px;
+}
+
+/**We are gamer Section**/
+.we_are_gamer{
+    padding: 55px 0;
+}
+.we_are_gamer button{
+    margin-left: auto;
+}
+.we_are_gamer p,
+.we_are_gamer h2{
+    text-align: right;
+}
+.we_are_gamer .right_column{
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+}
+.we_are_gamer h2{
+    margin-bottom: 24px;
+}
+.we_are_gamer p,
+.we_are_gamer button{
+    margin-bottom: 32px;
+}
+.we_are_gamer .font_24{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.we_are_gamer .font_32{
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+/*****Media Query for Tablet and mobile****/
+@media (max-width: 980px){
+    .header_container,
+    .right_nav,
+    .right_menu ul{
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .display_flex{
+        flex-direction: column;
+    }
+    .column_reverse{
+        flex-direction: column-reverse;
+    }
+    .right_menu ul, .right_follow_us, .site_logo{
+        justify-content: center;
+    }
+    .right_menu ul li{
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    .site_logo{
+        margin-bottom: 50px;
+    }
+    .right_follow_us{
+    width: fit-content;
+    margin: 0 auto;
+    }
+    .we_are_gamer .right_column{
+        max-width: unset;
+    }
+    .we_are_gamer p,
+    .we_are_gamer h2{
+        text-align: center;
+    }
+    .we_are_gamer button{
+        margin-right: auto;
+    }
 }
