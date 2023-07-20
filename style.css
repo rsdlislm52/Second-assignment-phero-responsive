@@ -198,12 +198,33 @@ h1{
 .img_overlay_relative>img {
     width: 100%;
 }
+/**Play Games Online Section**/
+.play_games_online .container{
+    align-items: center;
+}
+.play_games_online .right_column{
+    padding-left: 249px;
+}
+.left_img_relative{
+    position: relative;
+}
+.left_img_relative .left_img_absolute{
+    position: absolute;
+    right: -136px;
+    bottom: -123px;
+}
+.play_games_online h2{
+    margin-bottom: 24px;
+}
+.play_games_online{
+    padding: 120px 0;
+}
 /*****Media Query for Tablet and mobile****/
 @media (max-width: 980px){
     section.we_are_gamer img {
         width: 100%;
     }
-    section.hero_section .right_column img {
+    section.hero_section .right_column img, .left_img_relative>img {
         width: 100%;
     }
     .header_container,
@@ -242,5 +263,11 @@ h1{
     }
     .we_are_gamer button{
         margin-right: auto;
+    }
+    .play_games_online .right_column{
+        padding-left: 0;
+    }
+    body .left_img_relative{
+        margin-bottom: 150px;
     }
 }
